@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
+import Banner from "./components/Banner";
+import { Nav } from "./components/Nav";
+import Footer from "./components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const roboto = Roboto({
+  weight: ["100", "300", "400", "500", "700", "900"],
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -24,10 +24,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${roboto.className} antialiased`}>
+        <div className="h-[200px] relative">
+          <Image
+            src="/knollsestate.jpg"
+            fill={true}
+            alt="knolls estate"
+            style={{ objectFit: "cover" }}
+            quality={100}
+            sizes="100vw"
+          />
+        </div>
+        <Banner />
+        <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );
