@@ -1,15 +1,7 @@
 import Link from "next/link";
 import MaxWidthWrapper from "../components/MaxWidthWrapper";
-import { FileText } from "lucide-react";
 
 export default function Rules() {
-  //   const rules = [
-  //     { name: "ByLaws - 2009", link: "/" },
-  //     { name: "CC&R's - 1994", link: "/" },
-  //     { name: "2024 Rules & Regulations", link: "/" },
-  //     { name: "2024 Schedule of Fines and Late Fees", link: "/" },
-  //   ];
-
   const rules = [
     {
       name: "Rules",

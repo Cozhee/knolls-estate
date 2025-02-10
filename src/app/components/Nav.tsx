@@ -42,9 +42,11 @@ export function Nav() {
   return (
     <MaxWidthWrapper className="py-5">
       <NavigationMenu>
-        <NavigationMenuList>
+        <NavigationMenuList className="flex-col md:flex-row items-start">
           <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <NavigationMenuLink
+              className={`${navigationMenuTriggerStyle()} pl-5`}
+            >
               Home
             </NavigationMenuLink>
           </Link>
@@ -53,7 +55,7 @@ export function Nav() {
               The Association
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+              <ul className="grid gap-3 p-4 w-[90vw] md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <ListItem href="/board-of-directors" title="Board of Directors">
                   Community leadership
                 </ListItem>
@@ -77,7 +79,7 @@ export function Nav() {
               Community
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              <ul className="grid w-[90vw] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                 {components.map((component) => (
                   <ListItem
                     key={component.title}
@@ -95,7 +97,7 @@ export function Nav() {
               Finance
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid gap-3 p-4 md:w-[200px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+              <ul className="grid gap-3 p-4 w-[90vw] md:w-[200px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <ListItem href="/docs" title="Approved Budgets">
                   Yearly budget reports
                 </ListItem>
