@@ -46,7 +46,7 @@ export default function Rules() {
       <div className="py-10 flex flex-col gap-2">
         {rules.map((document) => (
           <div>
-            <h3 className="text-xl font-bold">{document.documents[0].name}</h3>
+            <h3 className="text-xl font-bold">{document.name}</h3>
             {document.documents.map((thing) => (
               <div className="flex items-center gap-2 underline text-blue-600 hover:text-blue-800">
                 <Link href={thing.link}>{thing.name}</Link>
